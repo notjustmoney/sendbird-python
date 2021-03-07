@@ -1,17 +1,21 @@
-from sendbird.api_resources.abstract.createable_api_resource import CreateableAPIResource  # NOQA
-from sendbird.api_resources.abstract.deletable_api_resource import DeletableAPIResource  # NOQA
-from sendbird.api_resources.abstract.listable_api_resource import ListableAPIResource  # NOQA
-from sendbird.api_resources.abstract.updatable_api_resource import UpdatableAPIResource  # NOQA
+from .abstracts import (
+    RetrievableApiResource,
+    CreatableApiResource,
+    ListableApiResource,
+    DeletableApiResource,
+    UpdatableApiResource,
+)
 
 
 class Message(
-    CreateableAPIResource,
-    DeletableAPIResource,
-    ListableAPIResource,
-    UpdatableAPIResource
+    RetrievableApiResource,
+    CreatableApiResource,
+    ListableApiResource,
+    DeletableApiResource,
+    UpdatableApiResource,
 ):
     RESOURCE_NAME = "message"
-    FIELD_PK = "message_id"
+    FIELD_PK_NAME = "message_id"
 
-    def instance_url(self):
+    def instantiate(self):
         pass

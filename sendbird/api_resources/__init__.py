@@ -1,5 +1,5 @@
-from sendbird.api_resources.channel import Channel  # NOQA
-from sendbird.api_resources.group_channel import GroupChannel  # NOQA
-from sendbird.api_resources.message import Message  # NOQA
-from sendbird.api_resources.open_channel import OpenChannel  # NOQA
-from sendbird.api_resources.user import User  # NOQA
+from .channel import Channel
+from .group_channel import GroupChannel
+from .message import Message
+from .open_channel import OpenChannel
+from .user import User

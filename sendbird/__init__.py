@@ -1,8 +1,9 @@
-# API resources
-from sendbird.api_resources import *  # NOQA
+from os import environ
 
-api_token = None
+from . import exceptions
+from .api_resources import *
+
+
+api_token = environ.get("SENDBIRD_API_TOKEN")
 api_app_id = None
-api_base = "https://api-{app_id}.sendbird.com/v3/".format(
-    app_id=api_app_id
-)
+api_base = "https://api.sendbird.com/v3/"
